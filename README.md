@@ -1,6 +1,7 @@
 ## Gerador de Ideias Inovadoras com Gemini
-
 Este projeto é um gerador de ideias criativas com foco em impacto social, usando a IA do **Google Gemini** para criar sugestões inovadoras de sistemas ou aplicativos baseados em temas pré-definidos. O usuário pode visualizar, gerar novas ideias e salvar suas favoritas em um banco de dados.
+
+ **Deploy do projeto:** [https://gerador-ideias-ebht.vercel.app/](https://gerador-ideias-ebht.vercel.app/)
 
 ## Funcionalidades
 -  Geração de ideias originais com IA (Google Gemini)
@@ -13,6 +14,28 @@ Este projeto é um gerador de ideias criativas com foco em impacto social, usand
 O sistema utiliza uma lista de temas fixos (como *segurança digital*, *comunidades rurais*, *mobilidade acessível*, etc.). A cada geração, um tema é escolhido aleatoriamente e enviado à API do Google Gemini com um prompt cuidadosamente elaborado para evitar respostas genéricas.
 
 A IA retorna um **objeto JSON** contendo título, descrição, funcionalidades, tecnologias e público-alvo da ideia, que é então exibida para o usuário.
+
+## Exemplo de Ideia Gerada
+```
+{
+  "titulo": "Plataforma de Apoio à Educação Rural",
+  "descricao": "Sistema que conecta educadores voluntários a escolas rurais para aulas remotas e mentorias, promovendo inclusão digital e acesso igualitário ao conhecimento.",
+  "funcionalidades": [
+    "Cadastro de escolas e voluntários",
+    "Agendamento de aulas online",
+    "Biblioteca de materiais didáticos digitais",
+    "Relatórios de impacto"
+  ],
+  "tecnologias": ["Next.js", "PostgreSQL", "Google Gemini API", "WebRTC"],
+  "publico_alvo": ["Escolas rurais, professores voluntários, ONGs de educação"]
+}
+```
+## Screenshot
+<div style="display: inline-block">
+  <img src="https://github.com/user-attachments/assets/a00d33f3-89b7-488b-ad35-bd4143ceb365" style="width: 400px; height: 400px;"> 
+  <img src="https://github.com/user-attachments/assets/10aca613-107c-4b28-b655-eba2e0012b25" style="width: 400px; height: 400px;">
+  <img src="https://github.com/user-attachments/assets/954de5ba-cdf7-4f31-8297-9b3f2ebb2f7f">
+</div>
 
 ## Tecnologias utilizadas
 | Categoria         | Ferramenta                                   |
@@ -57,8 +80,8 @@ O projeto utiliza o **Tembo**, uma solução cloud-native para PostgreSQL, ofere
 - **ORM**: Prisma
 - **Tabelas**:
   - `favoritos`: armazena ideias marcadas como favoritas
-  - 
-## Como utilizar localmente
+
+## Como rodar localmente
 1. Clone o repositório:
 ```
 git clone https://github.com/Fernandabitten/gerador-ideias.git
@@ -82,7 +105,24 @@ npx prisma migrate dev
 ```
 npm run dev
 ```
+## Como contribuir
+Contribuições são muito bem-vindas! Sinta-se à vontade para abrir issues, enviar pull requests ou sugerir melhorias.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (git checkout -b feature/nome-da-feature)
+3. Commit suas alterações (git commit -m 'feat: nova feature')
+4. Dê push na branch (git push origin feature/nome-da-feature)
+5. Abra um Pull Request
+
+## Contato
+Dúvidas ou sugestões? Entre em contato pelo  [Linkedin](https://www.linkedin.com/in/fernandabbittencourt/) ou abra uma issue neste repositório.
+
+## Referências
+[Google Gemini API](https://ai.google.dev/gemini-api/docs?hl=pt-br)
+[Next.js Documentation](https://nextjs.org/docs)
+[Prisma ORM](https://github.com/prisma/prisma)
+[Tembo Cloud](https://tembo.io/docs)
+
 ## Licença
-Distribuído sob a licença MIT.
+Distribuído sob a licença MIT. 
 
 
