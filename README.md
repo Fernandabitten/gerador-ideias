@@ -117,10 +117,10 @@ Contribuições são muito bem-vindas! Sinta-se à vontade para abrir issues, en
 Dúvidas ou sugestões? Entre em contato pelo  [Linkedin](https://www.linkedin.com/in/fernandabbittencourt/) ou abra uma issue neste repositório.
 
 ## Referências
-[Google Gemini API](https://ai.google.dev/gemini-api/docs?hl=pt-br)
-[Next.js Documentation](https://nextjs.org/docs)
-[Prisma ORM](https://github.com/prisma/prisma)
-[Tembo Cloud](https://tembo.io/docs)
+- [Google Gemini API](https://ai.google.dev/gemini-api/docs?hl=pt-br)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Prisma ORM](https://github.com/prisma/prisma)
+- [Tembo Cloud](https://tembo.io/docs)
 
 ## Licença
 Distribuído sob a licença MIT. 
