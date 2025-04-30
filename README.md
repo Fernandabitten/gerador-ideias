@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Gerador de Ideias Inovadoras com Gemini
 
-## Getting Started
+Este projeto é um gerador de ideias criativas com foco em impacto social, usando a IA do **Google Gemini** para criar sugestões inovadoras de sistemas ou aplicativos baseados em temas pré-definidos. O usuário pode visualizar, gerar novas ideias e salvar suas favoritas em um banco de dados.
 
-First, run the development server:
+## Funcionalidades
+-  Geração de ideias originais com IA (Google Gemini)
+-  Marcar/desmarcar ideias como favoritas
+-  Armazenamento persistente com banco Tembo (PostgreSQL)
+-  Interface responsiva com atualização dinâmica via API
+-  Backend e frontend unificados com Next.js + API Routes
 
+## Como funciona
+O sistema utiliza uma lista de temas fixos (como *segurança digital*, *comunidades rurais*, *mobilidade acessível*, etc.). A cada geração, um tema é escolhido aleatoriamente e enviado à API do Google Gemini com um prompt cuidadosamente elaborado para evitar respostas genéricas.
+
+A IA retorna um **objeto JSON** contendo título, descrição, funcionalidades, tecnologias e público-alvo da ideia, que é então exibida para o usuário.
+
+## Tecnologias utilizadas
+| Categoria         | Ferramenta                                   |
+|------------------|-----------------------------------------------|
+| Frontend         | React (Next.js + App Router)                  |
+| Estilização      | Tailwind CSS                                  |
+| Backend/API      | Next.js API Routes                            |
+| Banco de Dados   | PostgreSQL via Tembo Cloud                    |
+| ORM              | Prisma                                        |
+| Autenticação     | (Não implementado, mas possível com NextAuth) |
+| IA               | Google Gemini via API                         |
+| Hospedagem       | Vercel                                        |
+--------------------------------------------------------------------
+
+## Estrutura de Pastas
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/                   # Rotas e páginas do Next.js (incluindo rotas API)
+│   ├── api/               # Rotas de API do backend (favoritar ideia e gerar ideia com Gemini)
+│   │   ├── favoritos/     # Endpoints para listar, adicionar e remover ideias favoritas
+│   │   └── gerar-ideia/   # Endpoint que consome a IA do Gemini para gerar ideias
+│   ├── favoritos/         # Página que exibe as ideias favoritas salvas
+│   └── page.tsx           # Página inicial que gera e exibe a ideia
+├── components/            # Componentes reutilizáveis da interface
+│   ├── Header.tsx         # Cabeçalho do site
+│   ├── IdeaCard.tsx       # Cartão de exibição das ideias
+│   └── Toast.tsx          # Componente de feedback visual (sucesso, erro, etc.)
+├── hooks/                 # Hooks personalizados para lógica de favoritos e geração de ideias
+│   ├── useFavoritos.ts    # Hook para interações com ideias favoritas (GET, POST, DELETE)
+│   └── useIdeia.ts        # Hook para geração de ideias com Gemini
+├── lib/
+│   └── prisma.ts          # Instância do cliente Prisma para conexão com o banco
+├── prisma/
+│   └── schema.prisma      # Definição do modelo de dados usado pelo Prisma ORM
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Banco de dados
+O projeto utiliza o **Tembo**, uma solução cloud-native para PostgreSQL, oferecendo performance aprimorada e suporte a extensões.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Tipo**: PostgreSQL via Tembo Cloud
+- **ORM**: Prisma
+- **Tabelas**:
+  - `favoritos`: armazena ideias marcadas como favoritas
+  - 
+## Como utilizar localmente
+1. Clone o repositório:
+```
+git clone https://github.com/Fernandabitten/gerador-ideias.git
+cd gerador-ideias
+```
+2. Instale as dependências:
+```
+npm install
+```
+## Configure o banco e API
+- Crie um arquivo .env.local com:
+```
+DATABASE_URL=postgresql://usuario:senha@host:porta/nome-do-banco
+GEMINI_API_KEY=sua-chave-aqui
+```
+- Execute as migrações
+```
+npx prisma migrate dev
+```
+- Inicie o servidor de desenvolvimento
+```
+npm run dev
+```
+## Licença
+Distribuído sob a licença MIT.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
