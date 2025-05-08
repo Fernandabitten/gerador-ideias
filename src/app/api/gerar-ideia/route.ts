@@ -53,11 +53,12 @@ export async function POST(request: NextRequest) {
 
   try {
     const model = genAI.getGenerativeModel({
-      model: "models/gemini-1.5-pro-latest",
+      model: "models/gemini-2.0-flash",
       generationConfig: {
-        temperature: 1.3, // mais criativo
+        temperature: 1.3,
         topK: 40,
-        topP: 0.9,
+        topP: 0.95,
+        responseMimeType: "application/json",
       },
     });
 
@@ -77,8 +78,28 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ idea });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Erro ao gerar ideia", error);
-    return NextResponse.json({ error: "Erro ao gerar ideia" }, { status: 500 });
+
+    if (error && typeof error === "object" && "status" in error) {
+      const err = error as { status?: number; code?: string };
+      if (err.status === 429 || err.code === "RESOURCE_EXHAUSTED") {
+        return NextResponse.json(
+          {
+            error:
+              "Limite de uso da API atingido. Tente novamente em alguns minutos ou verifique o plano e cotas da API.",
+          },
+          { status: 429 }
+        );
+      }
+    }
+
+    // Outros erros
+    return NextResponse.json(
+      {
+        error: "Erro interno ao gerar ideia. Tente novamente mais tarde.",
+      },
+      { status: 500 }
+    );
   }
 }
