@@ -16,7 +16,6 @@ export default function IdeaCard({
   onDesfavoritar,
 }: IdeaCardProps) {
   return (
-    // <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 transition">
     <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 transition flex flex-col min-h-[500px]">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">{ideia.titulo}</h2>
 
@@ -27,9 +26,12 @@ export default function IdeaCard({
           <h3 className="text-lg font-semibold text-gray-700 mb-2">
             Funcionalidades
           </h3>
-          <ul className="list-disc list-inside text-gray-600">
+          <ul className="space-y-2 text-gray-600">
             {ideia.funcionalidades.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} className="flex items-start gap-2">
+                ✅
+                <span>{item}</span>
+              </li>
             ))}
           </ul>
         </div>
@@ -54,7 +56,13 @@ export default function IdeaCard({
           <h3 className="text-lg font-semibold text-gray-700 mb-2">
             Público-Alvo
           </h3>
-          <p className="text-gray-600">{ideia.publicoAlvo}</p>
+           <div className="border-l-2 border-gray-300 pl-4 space-y-2 text-gray-600">
+            {ideia.publicoAlvo.map((item, index) => (
+              <div key={index} className="rounded-md bg-gray-100 px-3 py-2">
+                {item}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="mt-auto flex">
