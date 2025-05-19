@@ -64,7 +64,7 @@ json
 | Frontend         | React (Next.js + App Router)                  |
 | Estilização      | Tailwind CSS                                  |
 | Backend/API      | Next.js API Routes                            |
-| Banco de Dados   | PostgreSQL via Tembo Cloud                    |
+| Banco de Dados   | PostgreSQL                   |
 | ORM              | Prisma                                        |
 | Autenticação     | (Não implementado, mas possível com NextAuth) |
 | IA               | Google Gemini via API                         |
