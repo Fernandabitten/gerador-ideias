@@ -16,7 +16,7 @@ Este projeto gera ideias criativas e impactantes, utilizando a inteligência art
 - **Favoritos e Persistência:** Marque e salve suas ideias favoritas com um backend Next.js integrado e banco de dados PostgreSQL via Tembo.
 - **Interface Moderna:** Desenvolvida com Next.js, Tailwind CSS e API Routes para uma experiência rápida e responsiva.
 
- **Deploy do projeto:** [https://gerador-ideias-ebht.vercel.app/](https://gerador-ideias-ebht.vercel.app/)
+ **Deploy do projeto:** [https://gerador-ideias.vercel.app/](https://gerador-ideias.vercel.app/)
 
  ## 📷 Galeria de Imagens
 
