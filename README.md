@@ -129,7 +129,6 @@ Dúvidas ou sugestões? Entre em contato pelo  [Linkedin](https://www.linkedin.c
 - Google Gemini API: [Documentação](https://ai.google.dev/gemini-api/docs?hl=pt-br)
 - Next.js Documentation: [Next.js](https://nextjs.org/docs)
 - Prisma ORM: [Prisma](https://github.com/prisma/prisma)
-- Tembo Cloud: [Tembo Docs](https://tembo.io/docs)
 
 ## Licença
 Distribuído sob a licença MIT. 
