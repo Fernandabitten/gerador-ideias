@@ -16,7 +16,7 @@ Este projeto gera ideias criativas e impactantes, utilizando a inteligência art
 - **Favoritos e Persistência:** Marque e salve suas ideias favoritas com um backend Next.js integrado e banco de dados PostgreSQL.
 - **Interface Moderna:** Desenvolvida com Next.js, Tailwind CSS e API Routes para uma experiência rápida e responsiva.
 
- **Deploy do projeto:** [https://gerador-ideias.vercel.app/](https://gerador-ideias.vercel.app/)
+ **Deploy do projeto:** [https://gerador-ideias.vercel.app/](https://gerador-ideias.vercel.app/) 
 
  ## 📷 Galeria de Imagens
 
@@ -125,7 +125,7 @@ Contribuições são sempre bem-vindas! Para ajudar a melhorar o projeto:
 Dúvidas ou sugestões? Entre em contato pelo  [Linkedin](https://www.linkedin.com/in/fernandabbittencourt/) ou abra uma issue neste repositório.
 
 ## 🔗 Links Úteis
-- Deploy do Projeto: [Acessar o Deploy](https://gerador-ideias-ebht.vercel.app/)
+- Deploy do Projeto: [Acessar o Deploy](https://gerador-ideias.vercel.app/)
 - Google Gemini API: [Documentação](https://ai.google.dev/gemini-api/docs?hl=pt-br)
 - Next.js Documentation: [Next.js](https://nextjs.org/docs)
 - Prisma ORM: [Prisma](https://github.com/prisma/prisma)
