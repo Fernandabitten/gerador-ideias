@@ -13,7 +13,7 @@ Este projeto gera ideias criativas e impactantes, utilizando a inteligência art
 ## ✨ Destaques
 
 - **Geração de Ideias Originais:** Utiliza a IA do Google Gemini para sugerir ideias inovadoras com foco em impacto social.
-- **Favoritos e Persistência:** Marque e salve suas ideias favoritas com um backend Next.js integrado e banco de dados PostgreSQL via Tembo.
+- **Favoritos e Persistência:** Marque e salve suas ideias favoritas com um backend Next.js integrado e banco de dados PostgreSQL.
 - **Interface Moderna:** Desenvolvida com Next.js, Tailwind CSS e API Routes para uma experiência rápida e responsiva.
 
  **Deploy do projeto:** [https://gerador-ideias.vercel.app/](https://gerador-ideias.vercel.app/)
