@@ -6,7 +6,6 @@ export default function Header() {
     <header className="w-full flex justify-between items-center p-4 bg-white text-black shadow-md sticky top-0 z-50">
       <Link href="/" className="text-xl font-bold">
         <p>
-          {/* <span className="text-2xl text-blue-500">Banco</span> de Ideias */}
           Gerador de ide<span className="text-2xl text-blue-500">IA</span>s
         </p>
       </Link>

@@ -35,32 +35,6 @@ export function useFavoritos() {
     }
   }
 
-  // async function desfavoritar(ideia: Ideia) {
-  //   console.log("Desfavoritando ideia:", ideia);
-  //   try {
-  //     const response = await fetch("/api/favoritos", {
-  //       method: "DELETE",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(ideia),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error("Erro ao desfavoritar ideia.");
-  //     }
-
-  //     setFavoritos((prev) =>
-  //       prev.filter(
-  //         (fav) =>
-  //           fav.titulo !== ideia.titulo || fav.descricao !== ideia.descricao
-  //       )
-  //     );
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
   async function desfavoritar(ideia: Ideia) {
     console.log("Desfavoritando ideia:", ideia);
     try {
